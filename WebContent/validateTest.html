@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+
+<script src="js/jquery.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+alert("hjbdggye")
+  $('#myform').validate({
+  
+    rules: {
+      "resume[zip_code]": {
+        required: true,
+        minlength: 5
+      },
+      "re-resume[zip_code]": {
+        required: true,
+        minlength: 5,
+        equalTo:"#pass"
+      }
+    },
+    messages: {
+      "resume[zip_code]": {
+        required: "this field is required",
+        minlength: "this field must contain at least {0} characters",
+        digits: "this field can only contain numbers"
+      }
+    },  
+    });
+
+});
+
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+		<form id="myform">
+  			<div class='control-group'><label class='control-label'>Zip Code: </label>
+  			<div class='controls'>
+  			 <input type='text' name='resume[zip_code]' id="pass"/>
+  			 <input type='text' name='re-resume[zip_code]'  />
+  			</div>
+			</div>
+  			<input type="submit" />
+</form>
+<a id="docs" href="http://docs.jquery.com/Plugins/Validation" target="_blank">Validation Documentation</a>
+</body>
+</html> -->
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My jQuery real good fun time yeah page</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+    $('#mySuperCoolForm').validate({
+        rules: {
+            things: {
+                required: true
+            }
+        },
+        messages: {
+            things: {
+                required: 'Please select at least one thing.'
+            }
+        }
+    });
+});
+    </script>
+</head>
+<body>
+    <form id="mySuperCoolForm">
+        <fieldset>
+            <legend>Select some stuff</legend>
+            <select name="things">
+            	<option>Choose...</option>
+                <option>thing 1</option>
+                <option>thing 2</option>
+                <option>thing 3</option>
+                <option>thing 4</option>
+                <option>thing 5</option>
+            </select>
+            <input type="submit" />
+        </fieldset>
+    </form>
+</body>
+</html>

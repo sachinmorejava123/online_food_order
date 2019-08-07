@@ -1,0 +1,180 @@
+<!-- <!-- <!DOCTYPE html>
+<html>
+<head>
+
+<script src="js/jquery.js"></script>
+<script>
+$(function() {	
+
+var incrementPlus;
+var incrementMinus;
+
+var buttonPlus  = $(".cart-qty-plus");
+var buttonMinus = $(".cart-qty-minus");
+
+var incrementPlus = buttonPlus.click(function() {
+	var $n = $(this)
+		.parent(".button-container")
+		.parent(".container")
+		.find(".qty");
+	$n.val(Number($n.val())+1 );
+});
+var incrementMinus = buttonMinus.click(function() {
+		var $n = $(this)
+		.parent(".button-container")
+		.parent(".container")
+		.find(".qty");
+	var amount = Number($n.val());
+	if (amount > 0) {
+		$n.val(amount-1);
+	}
+});
+});
+</script>
+
+<style type="text/css">
+#form-plus {
+			background:green;
+			color: white;
+			border-style: outset;
+			border-color: #0066A2;
+			height: 25px;
+			width: 30px;
+			font: bold 18px arial, sans-serif;
+			text-shadow:green;
+			}
+			
+			#form-minus{
+			background:red;
+			color: white;
+			border-style: outset;
+			border-color: #0066A2;
+			height: 25px;
+			width: 30px;
+			font: bold 18px arial, sans-serif;
+			text-shadow:green;
+			}
+</style>
+
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+<div class="button-container">
+		<button class="cart-qty-plus" type="button" value="+">+</button>
+		<input type="text" name="qty" class="qty" maxlength="12" value="0" class="input-text qty" />
+		<button class="cart-qty-minus" type="button" value="-">-</button>
+</div>
+</div>
+
+
+<div class="container"  style="font-size:large;margin-bottom:10px;">
+				<div class="button-container"> Quantity :
+					<button class="cart-qty-minus" type="button" value="-" id="form-minus">-</button>		
+					<input type="text" name="qty" class="qty" maxlength="5" size="1" value="0" class="input-text qty" style="font-size:17px" />
+					<button class="cart-qty-plus" type="button" value="+" id="form-plus">+</button>
+				</div></div>
+
+<div class="container">
+<div class="button-container">
+		<button class="cart-qty-minus" type="button" value="-" id="form-minus">-</button>		
+		<input type="text" name="qty" class="qty" maxlength="5" size="1" value="0" class="input-text qty" />
+		<button class="cart-qty-plus" type="button" value="+" id="form-plus">+</button>
+</div></div>
+
+<div class="container">
+<input type="text" name="qty" class="qty" maxlength="12" value="0" class="input-text qty" />
+<div class="button-container">
+		<button class="cart-qty-plus" type="button" value="+">+</button>
+		<button class="cart-qty-minus" type="button" value="-">-</button>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+<script>
+/*$(document).ready(function () {
+ $.validator.addMethod("valueNotEquals", function(value, element, arg){
+  return arg !== value;
+ }, "Value must not equal arg.");
+
+ // configure your validation
+ $("form").validate({
+  rules: {
+   SelectName: { valueNotEquals: "default" }
+  },
+  messages: {
+   SelectName: { valueNotEquals: "Please select an item!" }
+  }  
+ }); */
+	 /* $.validator.addMethod("valueNotEquals", function(value, element, arg){
+		  return arg != value;
+		 }, "Value must not equal arg.");
+
+		 // configure your validation
+		 $("form").validate({
+		  rules: {
+		   SelectName: { valueNotEquals: "-1" }
+		  },
+		  messages: {
+		   SelectName: { valueNotEquals: "Please select an item!" }
+		  }  
+		 });
+}); */
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+ 
+<script>
+$(document).ready(function () {
+  $('#myform').validate({ // initialize the plugin
+          rules: {
+          	user_type:{ required: true},
+          },
+          messages: {
+        	  user_type": {
+        		  required: "Full Name must required",
+        	  }, 
+      });
+});
+</script>
+  -->
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+<script>
+$(document).ready(function () {	
+alert("hi")
+	$("#myform" ).validate({
+  		rules: {
+   			"qty": {
+     	 		required: true,
+      			maxlength: 1,
+      			min:1,
+      			max:5
+   			},
+  	 	},
+	});
+});
+</script> 
+</head>
+<body>
+	<form id="myform" method="post"> 
+       	<input type="text" value="0" name="qty">
+        <input type="submit" value="submit">
+      </form> 
+      
+       
+</body>
+</html>
+
+
+
+ 
+ 
