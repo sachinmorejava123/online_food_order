@@ -209,7 +209,7 @@ height: 'auto',
                  </ul></nav>
       </div>
       <div class="col-1-2">
-        <h3>Email Updates</h3>
+        <h3>Update your email</h3>
         <p class="col1">Join our digital mailing list and get news<br> deals and be first to know about events</p>
         <form id="newsletter">
                   <div class="success">Your subscribe request has been sent!</div>
